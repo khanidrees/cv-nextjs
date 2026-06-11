@@ -1,0 +1,139 @@
+/* ─── Custom Stats Grid ─── */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.statCard {
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 16px;
+  padding: 1.75rem 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  overflow: hidden;
+  transition: all var(--transition-base);
+  cursor: default;
+}
+
+.statCard:hover {
+  border-color: color-mix(in srgb, var(--accent) 40%, transparent);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+}
+
+.statCard:hover .statGlow {
+  opacity: 1;
+}
+
+.statGlow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 100%, color-mix(in srgb, var(--accent) 12%, transparent), transparent 70%);
+  opacity: 0;
+  transition: opacity var(--transition-base);
+  pointer-events: none;
+}
+
+.statIcon {
+  font-size: 1.6rem;
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+.statValue {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--accent, var(--color-purple));
+  line-height: 1;
+  display: block;
+}
+
+.statLabel {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  display: block;
+}
+
+/* ─── Streak Card ─── */
+.streakWrapper {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-card);
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all var(--transition-base);
+}
+
+.streakWrapper:hover {
+  border-color: rgba(139, 92, 246, 0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+.streakImg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ─── Streak Fallback ─── */
+.streakFallback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 3rem 2rem;
+  text-align: center;
+  min-height: 160px;
+}
+
+.streakFallback span {
+  font-size: 2rem;
+}
+
+.streakFallback p {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.fallbackLink {
+  font-size: 0.85rem;
+  color: var(--color-purple);
+  font-weight: 500;
+  transition: opacity var(--transition-fast);
+}
+.fallbackLink:hover { opacity: 0.75; }
+
+/* ─── Profile Link ─── */
+.profileLink {
+  display: flex;
+  justify-content: center;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 900px) {
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+  .statValue { font-size: 1.75rem; }
+}
