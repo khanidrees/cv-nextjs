@@ -1,7 +1,5 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
 import ScrollProgress from '@/components/ui/ScrollProgress';
 
 export const metadata: Metadata = {
@@ -57,9 +55,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body>
         <ScrollProgress />
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
+        {children}
       </body>
     </html>
   );

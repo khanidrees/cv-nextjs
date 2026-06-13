@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Career Timeline | Idrees Khan Pathan</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Inter:wght@400;500&amp;family=Geist:wght@400;500&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        @font-face {
+            font-family: 'Geist';
+            src: url('https://cdn.jsdelivr.net/npm/geist@1.0.3/dist/fonts/geist-sans/Geist-Regular.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'Geist Mono';
+            src: url('https://cdn.jsdelivr.net/npm/geist@1.0.3/dist/fonts/geist-mono/GeistMono-Regular.woff2') format('woff2');
+        }
+
+        body {
+            background-color: #0d1515;
+            color: #dce4e5;
+            overflow-x: hidden;
+        }
+
+        .glass-card {
+            background: rgba(25, 33, 34, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .glass-card:hover {
+            transform: translateY(-4px);
+            border-color: #00f0ff;
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.15), inset 0 0 10px rgba(0, 240, 255, 0.05);
+        }
+
+        .timeline-dot {
+            box-shadow: 0 0 15px #00f0ff;
+            animation: pulse-glow 2s infinite ease-in-out;
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 5px #00f0ff; transform: scale(1); }
+            50% { box-shadow: 0 0 20px #00f0ff; transform: scale(1.2); }
+        }
+
+        .dashed-line {
+            background-image: linear-gradient(to bottom, #3b494b 50%, transparent 50%);
+            background-size: 1px 12px;
+            background-repeat: repeat-y;
+        }
+
+        .animate-fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s forwards ease-out;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-fixed-dim": "#c3c5dc",
+                      "surface-bright": "#333b3b",
+                      "inverse-primary": "#006970",
+                      "secondary-fixed-dim": "#c6c6cf",
+                      "outline-variant": "#3b494b",
+                      "on-surface": "#dce4e5",
+                      "surface-container-lowest": "#080f10",
+                      "primary": "#dbfcff",
+                      "on-tertiary-fixed": "#181b2b",
+                      "on-secondary": "#2f3037",
+                      "on-primary": "#00363a",
+                      "inverse-on-surface": "#2a3233",
+                      "secondary": "#c6c6cf",
+                      "tertiary": "#f6f5ff",
+                      "inverse-surface": "#dce4e5",
+                      "error-container": "#93000a",
+                      "on-secondary-fixed": "#1a1b22",
+                      "on-tertiary-fixed-variant": "#434659",
+                      "primary-container": "#00f0ff",
+                      "on-secondary-container": "#b4b4bd",
+                      "surface-variant": "#2e3637",
+                      "on-error": "#690005",
+                      "tertiary-fixed": "#dfe1f9",
+                      "tertiary-container": "#d6d8ef",
+                      "secondary-container": "#45464e",
+                      "on-tertiary-container": "#5b5e71",
+                      "secondary-fixed": "#e2e1eb",
+                      "on-secondary-fixed-variant": "#45464e",
+                      "surface-container-low": "#151d1e",
+                      "surface-dim": "#0d1515",
+                      "on-surface-variant": "#b9cacb",
+                      "surface-tint": "#00dbe9",
+                      "surface": "#0d1515",
+                      "primary-fixed": "#7df4ff",
+                      "on-tertiary": "#2c2f41",
+                      "background": "#0d1515",
+                      "surface-container-highest": "#2e3637",
+                      "on-background": "#dce4e5",
+                      "surface-container-high": "#232b2c",
+                      "on-primary-container": "#006970",
+                      "primary-fixed-dim": "#00dbe9",
+                      "on-primary-fixed": "#002022",
+                      "on-error-container": "#ffdad6",
+                      "surface-container": "#192122",
+                      "error": "#ffb4ab",
+                      "on-primary-fixed-variant": "#004f54",
+                      "outline": "#849495"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "unit": "4px",
+                      "margin-mobile": "20px",
+                      "max-width": "1280px",
+                      "margin-desktop": "80px"
+              },
+              "fontFamily": {
+                      "code": ["Geist Mono", "monospace"],
+                      "body-md": ["Inter", "sans-serif"],
+                      "body-lg": ["Inter", "sans-serif"],
+                      "headline-md": ["Plus Jakarta Sans", "sans-serif"],
+                      "display": ["Plus Jakarta Sans", "sans-serif"],
+                      "headline-lg": ["Plus Jakarta Sans", "sans-serif"],
+                      "label-md": ["Geist Mono", "monospace"],
+                      "headline-lg-mobile": ["Plus Jakarta Sans", "sans-serif"]
+              },
+              "fontSize": {
+                      "code": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                      "display": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                      "headline-lg": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "label-md": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                      "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="font-body-md text-on-surface bg-background">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-white/10">
+<div class="flex justify-between items-center max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop h-20">
+<div class="font-display text-headline-md font-bold text-primary-fixed-dim">DevPortfolio</div>
+<nav class="hidden md:flex gap-10">
+<a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary-fixed-dim hover:translate-y-[-2px] transition-all duration-200" href="#">Work</a>
+<a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary-fixed-dim hover:translate-y-[-2px] transition-all duration-200" href="#">Process</a>
+<a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary-fixed-dim hover:translate-y-[-2px] transition-all duration-200" href="#">Contact</a>
+</nav>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 rounded-lg font-bold transition-all active:scale-95 hover:shadow-[0_0_15px_rgba(0,240,255,0.4)]">
+                Resume
+            </button>
+</div>
+</header>
+<main class="pt-32 pb-20">
+<!-- Career Experience Section -->
+<section class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<!-- Header -->
+<div class="mb-20 text-center md:text-left">
+<h1 class="font-display text-headline-lg-mobile md:text-display text-on-surface mb-6 animate-fade-in-up" style="animation-delay: 0.1s">
+                    Career Timeline
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl animate-fade-in-up" style="animation-delay: 0.2s">
+                    Professional journey shipping scalable web, mobile, and cryptographic systems.
+                </p>
+</div>
+<!-- Timeline Container -->
+<div class="relative">
+<!-- Vertical Line -->
+<div class="absolute left-4 md:left-1/2 top-0 bottom-0 w-[1px] dashed-line -translate-x-1/2 hidden md:block"></div>
+<div class="absolute left-4 top-0 bottom-0 w-[1px] dashed-line md:hidden"></div>
+<!-- Entry 1: Slincom -->
+<div class="relative flex flex-col md:flex-row items-center justify-between mb-16 md:mb-24 w-full animate-fade-in-up" style="animation-delay: 0.3s">
+<div class="hidden md:block w-[45%] text-right pr-12">
+<span class="font-code text-label-md text-primary-fixed-dim tracking-widest uppercase">Dec 2025 – Present</span>
+</div>
+<div class="absolute left-4 md:left-1/2 w-3 h-3 bg-primary-container rounded-full -translate-x-1/2 z-10 timeline-dot"></div>
+<div class="w-full md:w-[45%] ml-12 md:ml-0 glass-card p-6 md:p-8 rounded-xl relative">
+<div class="md:hidden mb-4 font-code text-label-md text-primary-fixed-dim uppercase">Dec 2025 – Present</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Full-Stack Developer</h3>
+<p class="text-primary-fixed-dim font-medium mb-4">Slincom</p>
+<p class="text-on-surface-variant mb-6 leading-relaxed">
+                            Developed AgriThread Platform, integrated Socket.io sync for real-time B2B messaging, geospatial coordinates mapping, and Razorpay gateway for seamless transactions.
+                        </p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-variant/50 text-white text-[12px] font-code rounded flex items-center gap-1.5 border border-white/5">
+<span class="material-symbols-outlined text-[14px]">terminal</span> Next.js
+                            </span>
+<span class="px-3 py-1 bg-surface-variant/50 text-white text-[12px] font-code rounded flex items-center gap-1.5 border border-white/5">
+<span class="material-symbols-outlined text-[14px]">sync_alt</span> Socket.io
+                            </span>
+<span class="px-3 py-1 bg-surface-variant/50 text-white text-[12px] font-code rounded flex items-center gap-1.5 border border-white/5">
+<span class="material-symbols-outlined text-[14px]">javascript</span> Node.js
+                            </span>
+<span class="px-3 py-1 bg-surface-variant/50 text-white text-[12px] font-code rounded flex items-center gap-1.5 border border-white/5">
+<span class="material-symbols-outlined text-[14px]">database</span> Redis
+                            </span>
+</div>
+</div>
+</div>
+<!-- Entry 2: Freelancing -->
+<div class="relative flex flex-col md:flex-row-reverse items-center justify-between mb-16 md:mb-24 w-full animate-fade-in-up" style="animation-delay: 0.4s">
+<div class="hidden md:block w-[45%] text-left pl-12">
+<span class="font-code text-label-md text-primary-fixed-dim tracking-widest uppercase">Jan 2025 – Present</span>
+</div>
+<div class="absolute left-4 md:left-1/2 w-3 h-3 bg-primary-container rounded-full -translate-x-1/2 z-10 timeline-dot"></div>
+<div class="w-full md:w-[45%] ml-12 md:ml-0 glass-card p-6 md:p-8 rounded-xl">
+<div class="md:hidden mb-4 font-code text-label-md text-primary-fixed-dim uppercase">Jan 2025 – Present</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Full-Stack Developer</h3>
+<p class="text-primary-fixed-dim font-medium mb-4">Freelancing</p>
+<p class="text-on-surface-variant mb-6 leading-relaxed">
+                            Built a dynamic React Resume Builder featuring 8+ high-fidelity templates and client-side PDF rendering engine for optimized performance and instant feedback.
+                        </p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-variant/50 text-white text-[12px] font-code rounded flex items-center gap-1.5 border border-white/5">
+<span class="material-symbols-outlined text-[14px]">widgets</span> React
+                            </span>
+<span class="px-3 py-1 bg-surface-variant/50 text-white text-[12px] font-code rounded flex items-center gap-1.5 border border-white/5">
+<span class="material-symbols-outlined text-[14px]">code</span> TypeScript
+                            </span>
+<span class="px-3 py-1 bg-surface-variant/50 text-white text-[12px] font-code rounded flex items-center gap-1.5 border border-white/5">
+<span class="material-symbols-outlined text-[14px]">picture_as_pdf</span> PDF.js
+                            </span>
+<span class="px-3 py-1 bg-surface-variant/50 text-white text-[12px] font-code rounded flex items-center gap-1.5 border border-white/5">
+<span class="material-symbols-outlined text-[14px]">palette</span> Tailwind
+                            </span>
+</div>
+</div>
+</div>
+<!-- Entry 3: Hashtag Systems -->
+<div class="relative flex flex-col md:flex-row items-center justify-between mb-16 md:mb-24 w-full animate-fade-in-up" style="animation-delay: 0.5s">
+<div class="hidden md:block w-[45%] text-right pr-12">
+<span class="font-code text-label-md text-primary-fixed-dim tracking-widest uppercase">Jun 2022 – Mar 2024</span>
+</div>
+<div class="absolute left-4 md:left-1/2 w-3 h-3 bg-primary-container rounded-full -translate-x-1/2 z-10 timeline-dot"></div>
+<div class="w-full md:w-[45%] ml-12 md:ml-0 glass-card p-6 md:p-8 rounded-xl">
+<div class="md:hidden mb-4 font-code text-label-md text-primary-fixed-dim uppercase">Jun 2022 – Mar 2024</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Full-Stack Developer</h3>
+<p class="text-primary-fixed-dim font-medium mb-4">Hashtag Systems</p>
+<p class="text-on-surface-variant mb-6 leading-relaxed">
+                            Optimized 'Ring Of Hires' platform with custom Google Maps integration resulting in 40% latency reduction. Developed 'LogX' iOS App increasing QR scanning efficiency by 50%.
+                        </p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-variant/50 text-white text-[12px] font-code rounded flex items-center gap-1.5 border border-white/5">
+<span class="material-symbols-outlined text-[14px]">smartphone</span> React Native
+                            </span>
+<span class="px-3 py-1 bg-surface-variant/50 text-white text-[12px] font-code rounded flex items-center gap-1.5 border border-white/5">
+<span class="material-symbols-outlined text-[14px]">javascript</span> Node.js
+                            </span>
+<span class="px-3 py-1 bg-surface-variant/50 text-white text-[12px] font-code rounded flex items-center gap-1.5 border border-white/5">
+<span class="material-symbols-outlined text-[14px]">map</span> Google Maps
+                            </span>
+<span class="px-3 py-1 bg-surface-variant/50 text-white text-[12px] font-code rounded flex items-center gap-1.5 border border-white/5">
+<span class="material-symbols-outlined text-[14px]">storage</span> PostgreSQL
+                            </span>
+</div>
+</div>
+</div>
+<!-- Entry 4: TruScholar -->
+<div class="relative flex flex-col md:flex-row-reverse items-center justify-between mb-0 w-full animate-fade-in-up" style="animation-delay: 0.6s">
+<div class="hidden md:block w-[45%] text-left pl-12">
+<span class="font-code text-label-md text-primary-fixed-dim tracking-widest uppercase">Jun 2021 – May 2022</span>
+</div>
+<div class="absolute left-4 md:left-1/2 w-3 h-3 bg-primary-container rounded-full -translate-x-1/2 z-10 timeline-dot"></div>
+<div class="w-full md:w-[45%] ml-12 md:ml-0 glass-card p-6 md:p-8 rounded-xl">
+<div class="md:hidden mb-4 font-code text-label-md text-primary-fixed-dim uppercase">Jun 2021 – May 2022</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Full-Stack Developer &amp; Intern</h3>
+<p class="text-primary-fixed-dim font-medium mb-4">TruScholar</p>
+<p class="text-on-surface-variant mb-6 leading-relaxed">
+                            Engineered a robust bulk certificate download system using Redis and Bull.js for asynchronous processing, achieving a 30% increase in system throughput.
+                        </p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-variant/50 text-white text-[12px] font-code rounded flex items-center gap-1.5 border border-white/5">
+<span class="material-symbols-outlined text-[14px]">database</span> Redis
+                            </span>
+<span class="px-3 py-1 bg-surface-variant/50 text-white text-[12px] font-code rounded flex items-center gap-1.5 border border-white/5">
+<span class="material-symbols-outlined text-[14px]">rebase_edit</span> Bull.js
+                            </span>
+<span class="px-3 py-1 bg-surface-variant/50 text-white text-[12px] font-code rounded flex items-center gap-1.5 border border-white/5">
+<span class="material-symbols-outlined text-[14px]">dns</span> Express
+                            </span>
+<span class="px-3 py-1 bg-surface-variant/50 text-white text-[12px] font-code rounded flex items-center gap-1.5 border border-white/5">
+<span class="material-symbols-outlined text-[14px]">account_tree</span> MongoDB
+                            </span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Component -->
+<footer class="bg-surface-container-lowest border-t border-white/5 w-full py-20">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop gap-gutter">
+<div class="font-display text-headline-md text-on-surface">Idrees Khan Pathan</div>
+<div class="flex gap-8 mt-8 md:mt-0">
+<a class="text-on-surface-variant hover:text-primary-fixed-dim transition-colors font-body-md text-body-md" href="#">LinkedIn</a>
+<a class="text-on-surface-variant hover:text-primary-fixed-dim transition-colors font-body-md text-body-md" href="#">GitHub</a>
+<a class="text-on-surface-variant hover:text-primary-fixed-dim transition-colors font-body-md text-body-md" href="#">Twitter</a>
+<a class="text-on-surface-variant hover:text-primary-fixed-dim transition-colors font-body-md text-body-md" href="#">Source Code</a>
+</div>
+<p class="text-on-surface-variant font-body-md text-body-md mt-8 md:mt-0">© 2024 Full-Stack Engineer</p>
+</div>
+</footer>
+<script>
+        // Intersection Observer for scroll reveal animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-fade-in-up').forEach(el => observer.observe(el));
+    </script>
+</body></html>

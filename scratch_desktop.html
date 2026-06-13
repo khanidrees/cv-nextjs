@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Idrees Khan Pathan | Full-Stack Engineer</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed-variant": "#004f54",
+                        "primary-fixed-dim": "#00dbe9",
+                        "surface-container-high": "#232b2c",
+                        "on-secondary-fixed-variant": "#45464e",
+                        "on-primary-fixed": "#002022",
+                        "on-surface-variant": "#b9cacb",
+                        "primary": "#dbfcff",
+                        "on-surface": "#dce4e5",
+                        "surface": "#0d1515",
+                        "on-secondary-fixed": "#1a1b22",
+                        "secondary-fixed-dim": "#c6c6cf",
+                        "on-tertiary-fixed": "#181b2b",
+                        "inverse-primary": "#006970",
+                        "surface-dim": "#0d1515",
+                        "error": "#ffb4ab",
+                        "surface-tint": "#00dbe9",
+                        "surface-variant": "#2e3637",
+                        "on-primary": "#00363a",
+                        "on-secondary-container": "#b4b4bd",
+                        "primary-container": "#00f0ff",
+                        "inverse-surface": "#dce4e5",
+                        "surface-container-highest": "#2e3637",
+                        "on-error": "#690005",
+                        "background": "#0d1515",
+                        "primary-fixed": "#7df4ff",
+                        "secondary": "#c6c6cf",
+                        "tertiary-container": "#d6d8ef",
+                        "outline-variant": "#3b494b",
+                        "on-tertiary-container": "#5b5e71",
+                        "secondary-fixed": "#e2e1eb",
+                        "tertiary-fixed-dim": "#c3c5dc",
+                        "on-error-container": "#ffdad6",
+                        "tertiary": "#f6f5ff",
+                        "on-tertiary": "#2c2f41",
+                        "surface-container-lowest": "#080f10",
+                        "on-tertiary-fixed-variant": "#434659",
+                        "surface-container": "#192122",
+                        "on-secondary": "#2f3037",
+                        "on-background": "#dce4e5",
+                        "error-container": "#93000a",
+                        "surface-container-low": "#151d1e",
+                        "surface-bright": "#333b3b",
+                        "secondary-container": "#45464e",
+                        "outline": "#849495",
+                        "inverse-on-surface": "#2a3233",
+                        "tertiary-fixed": "#dfe1f9",
+                        "on-primary-container": "#006970"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "max-width": "1280px",
+                        "unit": "4px",
+                        "gutter": "24px",
+                        "margin-desktop": "80px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "display": ["Plus Jakarta Sans"],
+                        "label-md": ["Geist Mono"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "body-md": ["Inter"],
+                        "headline-lg-mobile": ["Plus Jakarta Sans"],
+                        "code": ["Geist Mono"],
+                        "headline-md": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "display": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "800" }],
+                        "label-md": ["14px", { "lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-lg": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "code": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #0d1515;
+            background-image: radial-gradient(circle at 2px 2px, rgba(255, 255, 255, 0.05) 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+        .glass-card {
+            background: rgba(26, 29, 46, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .ambient-glow {
+            filter: blur(120px);
+            opacity: 0.15;
+            z-index: -1;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-surface">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-white/10 transition-all duration-200">
+<div class="flex justify-between items-center max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop h-20">
+<div class="font-display text-headline-md font-bold text-primary-fixed-dim">DevPortfolio</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-label-md text-label-md text-primary-fixed-dim font-bold border-b-2 border-primary-fixed-dim pb-1 transition-all" href="#work">Work</a>
+<a class="font-label-md text-label-md text-on-surface-variant font-medium hover:text-primary-fixed-dim hover:translate-y-[-2px] transition-all" href="#process">Process</a>
+<a class="font-label-md text-label-md text-on-surface-variant font-medium hover:text-primary-fixed-dim hover:translate-y-[-2px] transition-all" href="#contact">Contact</a>
+<button class="bg-primary-container text-on-primary px-6 py-2 rounded-lg font-bold transition-all active:scale-95 hover:translate-y-[-2px]">Resume</button>
+</div>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-primary-fixed-dim">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative overflow-hidden min-h-[90vh] flex items-center px-margin-mobile md:px-margin-desktop">
+<div class="absolute top-1/4 -left-20 w-96 h-96 bg-primary-fixed-dim ambient-glow"></div>
+<div class="absolute bottom-1/4 -right-20 w-96 h-96 bg-on-primary-fixed-variant ambient-glow"></div>
+<div class="max-w-4xl z-10">
+<h1 class="font-display text-headline-lg-mobile md:text-display text-primary-fixed-dim mb-6">
+                    I build high-performance web apps that scale.
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-10">
+                    Full-stack developer specialized in real-time platforms, blockchain solutions, and multi-role systems. I turn ambitious ideas into fast, reliable products.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="bg-primary-container text-on-primary px-8 py-4 rounded font-bold text-center transition-all hover:translate-y-[-2px] hover:shadow-[0_0_20px_rgba(0,240,255,0.3)]" href="#work">
+                        View My Work
+                    </a>
+<a class="border border-primary-fixed-dim text-primary-fixed-dim px-8 py-4 rounded font-bold text-center transition-all hover:bg-primary-fixed-dim/10 hover:translate-y-[-2px]" href="#contact">
+                        Start a Project
+                    </a>
+</div>
+</div>
+</section>
+<!-- Social Proof Bar -->
+<section class="bg-surface-container-low border-y border-white/5 py-12">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="flex flex-col items-center text-center space-y-2">
+<span class="material-symbols-outlined text-primary-fixed-dim text-3xl">verified_user</span>
+<span class="font-label-md text-primary-fixed-dim">3+ Years Experience</span>
+</div>
+<div class="flex flex-col items-center text-center space-y-2">
+<span class="material-symbols-outlined text-primary-fixed-dim text-3xl">rocket_launch</span>
+<span class="font-label-md text-primary-fixed-dim">10+ Production Apps</span>
+</div>
+<div class="flex flex-col items-center text-center space-y-2">
+<span class="material-symbols-outlined text-primary-fixed-dim text-3xl">bolt</span>
+<span class="font-label-md text-primary-fixed-dim">40% Faster APIs</span>
+</div>
+<div class="flex flex-col items-center text-center space-y-2">
+<span class="material-symbols-outlined text-primary-fixed-dim text-3xl">timer</span>
+<span class="font-label-md text-primary-fixed-dim">90% Validation Speedup</span>
+</div>
+</div>
+</section>
+<!-- Work Section -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto" id="work">
+<div class="flex items-end justify-between mb-16">
+<div>
+<h2 class="font-display text-headline-lg text-primary-fixed-dim">Selected Work</h2>
+<p class="text-on-surface-variant mt-4">Engineering-first solutions for complex digital challenges.</p>
+</div>
+<div class="hidden md:block h-[1px] flex-grow mx-12 bg-white/10 mb-4"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- AgriThread -->
+<div class="glass-card rounded-xl overflow-hidden group cursor-pointer transition-all hover:border-primary-fixed-dim/50">
+<div class="aspect-video relative overflow-hidden">
+<img alt="AgriThread Platform Dashboard" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxhSpeIbDyLLXpuJqLqntF_e8wi5ws_APuD8StFYo_79iRgeC54bxfEiDGkh5-sDKKAXIjG9lpwdhX0DQdNn6e089yQ4_oVUydRLc4AXRqaKTczevFkwWUQT0cq5-nWqcUmiuxZM9jRUh31wSTbAHFQjqtWlMzYM1lHOtEJnzqRZi7GqmTNUc1YAsRLgqbGOuoVJhupnbG8E-2MqmgPgs1CaAZV_diAJDfD97D-ilqhnqN8uuH_9wN-YRrAFmDahBKNWhf3pKQhQ"/>
+<div class="absolute inset-0 bg-surface/40 group-hover:bg-transparent transition-colors"></div>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-display text-headline-md text-on-surface">AgriThread</h3>
+<span class="bg-surface-container-high px-3 py-1 text-[10px] font-bold tracking-widest text-primary-fixed-dim rounded uppercase border border-white/5">Scalable SaaS</span>
+</div>
+<p class="text-on-surface-variant font-body-md mb-6">Multi-role agricultural platform with real-time chat, job matching, and B2B marketplace. Scaled horizontally to handle thousands of concurrent users.</p>
+<div class="flex items-center gap-2 text-primary-fixed-dim font-label-md">
+<span class="material-symbols-outlined text-sm">analytics</span>
+<span>Supported 4 user roles with zero latency chat engine.</span>
+</div>
+</div>
+</div>
+<!-- VerifyCertify -->
+<div class="glass-card rounded-xl overflow-hidden group cursor-pointer transition-all hover:border-primary-fixed-dim/50">
+<div class="aspect-video relative overflow-hidden">
+<img alt="VerifyCertify Blockchain Verification" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-Z7Ei-nzu5h54TZ8_OsZbtQOdy8926VX4KFRre9nn1RvQdYldzdQkccP_gg3AB2PeSjRNPncMDDw7IwzThsPhh4Fqukqq-MpQbLz5FhS9qbuDXnj3P4AY7ipr9WbU4q2nemWeP4ZgrAgcLdwJ6Se6Fi5mSJr_fo3oJGFd__RwPyESKQ7xXNaodHL85beWfQzGo2sIGe6bUyq_EpNkze_WgGnG7oeX8MwUHWkjvWOTCEI_5-qe9ikndbJwR9gUYCvwwTl0BU1P2g"/>
+<div class="absolute inset-0 bg-surface/40 group-hover:bg-transparent transition-colors"></div>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-display text-headline-md text-on-surface">VerifyCertify</h3>
+<span class="bg-surface-container-high px-3 py-1 text-[10px] font-bold tracking-widest text-primary-fixed-dim rounded uppercase border border-white/5">Blockchain</span>
+</div>
+<p class="text-on-surface-variant font-body-md mb-6">Blockchain certificate verification system. Reduced validation time from days to seconds.</p>
+<div class="flex items-center gap-2 text-primary-fixed-dim font-label-md">
+<span class="material-symbols-outlined text-sm">security</span>
+<span>90% faster verification, fraud-proof credentials.</span>
+</div>
+</div>
+</div>
+<!-- ATS Resume Builder -->
+<div class="glass-card rounded-xl overflow-hidden group cursor-pointer transition-all hover:border-primary-fixed-dim/50 md:col-span-2">
+<div class="grid md:grid-cols-2">
+<div class="aspect-video md:aspect-auto relative overflow-hidden border-r border-white/10">
+<img alt="ATS Resume Builder Interface" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCIT0PCLqEE6QtSrKpJQkPhLEPEjwtRqoe1BPBwtSdp3LhMCPowdWtcDmQ3QbPkVWqG4t0MifbjABsCZpgANi4eJAH4Ufino2SgqqQIugmKunPWdUUh2gA0VtG98XObbwEjjFPbH9FhBCdNH0L0XH0R7gUpffE8dQR7Z-pnVETSUa_iBFC7nIHTs94xCfVrPVU3VqLxLqr9z63ZUKo8LRwSPGXf9ZbKOO2Lf8kASowu2j5DftNfH8kH3Kk3HniIGhqYTonSnvgzw"/>
+<div class="absolute inset-0 bg-surface/40 group-hover:bg-transparent transition-colors"></div>
+</div>
+<div class="p-8 md:p-12 flex flex-col justify-center">
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-display text-headline-md text-on-surface">ATS Resume Builder</h3>
+<span class="bg-surface-container-high px-3 py-1 text-[10px] font-bold tracking-widest text-primary-fixed-dim rounded uppercase border border-white/5">Productivity</span>
+</div>
+<p class="text-on-surface-variant font-body-md mb-6">Dynamic resume builder with 8+ templates, live preview, and instant PDF export. Used by hundreds of job seekers.</p>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2 text-primary-fixed-dim font-label-md">
+<span class="material-symbols-outlined text-sm">speed</span>
+<span>Lighthouse score 98</span>
+</div>
+<div class="flex items-center gap-2 text-primary-fixed-dim font-label-md">
+<span class="material-symbols-outlined text-sm">grid_view</span>
+<span>0% layout shift</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Process Section -->
+<section class="py-24 bg-surface-container-lowest" id="process">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<h2 class="font-display text-headline-lg text-primary-fixed-dim mb-16 text-center">Engineering Workflow</h2>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+<!-- Connector Line (Desktop) -->
+<div class="hidden md:block absolute top-12 left-0 w-full h-[1px] bg-dashed border-t border-dashed border-white/10"></div>
+<div class="relative z-10 flex flex-col items-center md:items-start group">
+<div class="w-24 h-24 rounded-full bg-surface-container-high border border-white/10 flex items-center justify-center mb-6 transition-all group-hover:border-primary-fixed-dim group-hover:shadow-[0_0_20px_rgba(0,240,255,0.1)]">
+<span class="font-label-md text-headline-md text-primary-fixed-dim">01</span>
+</div>
+<h4 class="font-display text-headline-md mb-2">Discovery</h4>
+<p class="text-on-surface-variant text-center md:text-left text-body-md">Mapping requirements and defining technical specifications.</p>
+</div>
+<div class="relative z-10 flex flex-col items-center md:items-start group">
+<div class="w-24 h-24 rounded-full bg-surface-container-high border border-white/10 flex items-center justify-center mb-6 transition-all group-hover:border-primary-fixed-dim group-hover:shadow-[0_0_20px_rgba(0,240,255,0.1)]">
+<span class="font-label-md text-headline-md text-primary-fixed-dim">02</span>
+</div>
+<h4 class="font-display text-headline-md mb-2">Architecture</h4>
+<p class="text-on-surface-variant text-center md:text-left text-body-md">Designing data models and selecting the optimal stack.</p>
+</div>
+<div class="relative z-10 flex flex-col items-center md:items-start group">
+<div class="w-24 h-24 rounded-full bg-surface-container-high border border-white/10 flex items-center justify-center mb-6 transition-all group-hover:border-primary-fixed-dim group-hover:shadow-[0_0_20px_rgba(0,240,255,0.1)]">
+<span class="font-label-md text-headline-md text-primary-fixed-dim">03</span>
+</div>
+<h4 class="font-display text-headline-md mb-2">Iteration</h4>
+<p class="text-on-surface-variant text-center md:text-left text-body-md">Agile development cycles with continuous integration.</p>
+</div>
+<div class="relative z-10 flex flex-col items-center md:items-start group">
+<div class="w-24 h-24 rounded-full bg-surface-container-high border border-white/10 flex items-center justify-center mb-6 transition-all group-hover:border-primary-fixed-dim group-hover:shadow-[0_0_20px_rgba(0,240,255,0.1)]">
+<span class="font-label-md text-headline-md text-primary-fixed-dim">04</span>
+</div>
+<h4 class="font-display text-headline-md mb-2">Launch</h4>
+<p class="text-on-surface-variant text-center md:text-left text-body-md">Deployment, optimization, and seamless handover.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Stack & Tech Section -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
+<div class="grid lg:grid-cols-2 gap-20 items-center">
+<div>
+<h2 class="font-display text-headline-lg text-primary-fixed-dim mb-8">Technical Proficiency</h2>
+<div class="flex flex-wrap gap-3">
+<span class="px-4 py-2 bg-surface-container-high border border-white/5 rounded text-on-surface-variant font-label-md flex items-center gap-2 hover:border-primary-fixed-dim transition-colors cursor-default">
+<span class="material-symbols-outlined text-sm">code</span> React
+                        </span>
+<span class="px-4 py-2 bg-surface-container-high border border-white/5 rounded text-on-surface-variant font-label-md flex items-center gap-2 hover:border-primary-fixed-dim transition-colors cursor-default">
+<span class="material-symbols-outlined text-sm">layers</span> Next.js
+                        </span>
+<span class="px-4 py-2 bg-surface-container-high border border-white/5 rounded text-on-surface-variant font-label-md flex items-center gap-2 hover:border-primary-fixed-dim transition-colors cursor-default">
+<span class="material-symbols-outlined text-sm">terminal</span> Node.js
+                        </span>
+<span class="px-4 py-2 bg-surface-container-high border border-white/5 rounded text-on-surface-variant font-label-md flex items-center gap-2 hover:border-primary-fixed-dim transition-colors cursor-default">
+<span class="material-symbols-outlined text-sm">token</span> TypeScript
+                        </span>
+<span class="px-4 py-2 bg-surface-container-high border border-white/5 rounded text-on-surface-variant font-label-md flex items-center gap-2 hover:border-primary-fixed-dim transition-colors cursor-default">
+<span class="material-symbols-outlined text-sm">database</span> PostgreSQL
+                        </span>
+<span class="px-4 py-2 bg-surface-container-high border border-white/5 rounded text-on-surface-variant font-label-md flex items-center gap-2 hover:border-primary-fixed-dim transition-colors cursor-default">
+<span class="material-symbols-outlined text-sm">storage</span> MongoDB
+                        </span>
+<span class="px-4 py-2 bg-surface-container-high border border-white/5 rounded text-on-surface-variant font-label-md flex items-center gap-2 hover:border-primary-fixed-dim transition-colors cursor-default">
+<span class="material-symbols-outlined text-sm">memory</span> Redis
+                        </span>
+<span class="px-4 py-2 bg-surface-container-high border border-white/5 rounded text-on-surface-variant font-label-md flex items-center gap-2 hover:border-primary-fixed-dim transition-colors cursor-default">
+<span class="material-symbols-outlined text-sm">forum</span> Socket.io
+                        </span>
+<span class="px-4 py-2 bg-surface-container-high border border-white/5 rounded text-on-surface-variant font-label-md flex items-center gap-2 hover:border-primary-fixed-dim transition-colors cursor-default">
+<span class="material-symbols-outlined text-sm">link</span> Solana
+                        </span>
+<span class="px-4 py-2 bg-surface-container-high border border-white/5 rounded text-on-surface-variant font-label-md flex items-center gap-2 hover:border-primary-fixed-dim transition-colors cursor-default">
+<span class="material-symbols-outlined text-sm">contacts</span> Docker
+                        </span>
+<span class="px-4 py-2 bg-surface-container-high border border-white/5 rounded text-on-surface-variant font-label-md flex items-center gap-2 hover:border-primary-fixed-dim transition-colors cursor-default">
+<span class="material-symbols-outlined text-sm">cloud</span> AWS
+                        </span>
+</div>
+</div>
+<div class="glass-card p-10 rounded-xl border-primary-fixed-dim/20 flex flex-col items-center text-center">
+<div class="relative w-32 h-32 mb-6">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 100 100">
+<circle class="text-white/5" cx="50" cy="50" fill="transparent" r="40" stroke="currentColor" stroke-width="8"></circle>
+<circle class="text-primary-fixed-dim" cx="50" cy="50" fill="transparent" r="40" stroke="currentColor" stroke-dasharray="251.2" stroke-dashoffset="12.5" stroke-linecap="round" stroke-width="8"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="text-4xl font-display font-bold text-primary-fixed-dim">95</span>
+<span class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">Score</span>
+</div>
+</div>
+<h3 class="font-display text-headline-md mb-2">Performance Standards</h3>
+<p class="text-on-surface-variant">Lighthouse 95+ average across all production deployments. Prioritizing Core Web Vitals and accessibility from line one.</p>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-32 bg-surface-container-low overflow-hidden relative" id="contact">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-[120%] h-full bg-gradient-to-b from-primary-fixed-dim/5 to-transparent blur-3xl -z-10"></div>
+<div class="max-w-4xl mx-auto px-margin-mobile text-center">
+<h2 class="font-display text-headline-lg md:text-display text-on-surface mb-8">Let's work together.</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12">Currently open to new projects and engineering opportunities. Let's build something exceptional.</p>
+<div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+<button class="w-full sm:w-auto bg-primary-container text-on-primary px-10 py-5 rounded font-bold transition-all hover:translate-y-[-2px] hover:shadow-[0_0_30px_rgba(0,240,255,0.2)]">
+                        Download CV
+                    </button>
+<button class="w-full sm:w-auto bg-surface border border-white/10 text-on-surface px-10 py-5 rounded font-bold transition-all hover:bg-white/5 hover:translate-y-[-2px]">
+                        Book a Call
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-white/5 w-full py-20">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-max-width mx-auto px-margin-desktop gap-gutter">
+<div class="flex flex-col items-center md:items-start gap-4">
+<div class="font-display text-headline-md text-on-surface">DevPortfolio</div>
+<p class="font-body-md text-body-md text-on-surface-variant">© 2024 Full-Stack Engineer</p>
+</div>
+<div class="flex gap-8">
+<a class="text-on-surface-variant hover:text-primary-fixed-dim transition-colors font-body-md" href="#">LinkedIn</a>
+<a class="text-on-surface-variant hover:text-primary-fixed-dim transition-colors font-body-md" href="#">GitHub</a>
+<a class="text-on-surface-variant hover:text-primary-fixed-dim transition-colors font-body-md" href="#">Twitter</a>
+<a class="text-on-surface-variant hover:text-primary-fixed-dim transition-colors font-body-md" href="#">Source Code</a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple scroll reveal or header interaction can be added here
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-4');
+                nav.classList.remove('h-20');
+            } else {
+                nav.classList.remove('py-4');
+                nav.classList.add('h-20');
+            }
+        });
+    </script>
+</body></html>
