@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import dynamic from 'next/dynamic';
+import emailjs from '@emailjs/browser';
 
 const GitHubCalendar = dynamic(
   () => import('react-github-calendar').then((mod) => mod.GitHubCalendar),
@@ -29,26 +30,40 @@ export default function HomePage() {
     if (!formData.name || !formData.email || !formData.message) return;
     setFormStatus('submitting');
     
-    const formspreeKey = process.env.NEXT_PUBLIC_FORMSPREE_KEY || "YOUR_FORMSPREE_FORM_ID";
+    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+    const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+
+    if (!serviceId || !templateId || !publicKey) {
+      console.error('EmailJS configuration variables are missing.');
+      setFormStatus('error');
+      return;
+    }
 
     try {
-      const response = await fetch(`https://formspree.io/f/${formspreeKey}`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
+      const result = await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          title: 'Portfolio Inquiry',
+          name: formData.name,
+          from_name: formData.name,
+          message: formData.message,
+          reply_to: formData.email,
+          time: new Date().toLocaleString(),
         },
-        body: JSON.stringify(formData)
-      });
+        publicKey
+      );
 
-      if (response.ok) {
+      if (result.status === 200) {
         setFormStatus('success');
         setFormData({ name: '', email: '', message: '' });
         setTimeout(() => setFormStatus('idle'), 5000);
       } else {
         setFormStatus('error');
       }
-    } catch {
+    } catch (error) {
+      console.error('EmailJS error:', error);
       setFormStatus('error');
     }
   };
