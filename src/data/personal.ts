@@ -214,6 +214,7 @@ export const projects: Project[] = [
     description:
       'A large-scale multi-role agricultural platform built for Farmers, Businesses, Professionals, and Government. Features a social feed with ranking algorithms, a job portal, B2B/B2C marketplace with auto-quote generation, geospatial farm mapping via Google Maps, real-time Socket.io chat, ATS CV builder, commodity price analytics, and a Razorpay-powered ads engine.',
     tech: ['Next.js', 'TypeScript', 'Node.js', 'Express.js', 'PostgreSQL', 'Prisma', 'Redis', 'BullMQ', 'Socket.io', 'Google Maps API'],
+    liveUrl: 'https://agrithread.com',
     featured: true,
   },
   {

@@ -38,6 +38,7 @@ export interface CaseStudy {
   timeline: CaseStudyTimelineStep[];
   impact: CaseStudyImpactCard[];
   showcaseImage: string;
+  liveUrl?: string;
 }
 
 export const caseStudies: Record<string, CaseStudy> = {
@@ -46,7 +47,8 @@ export const caseStudies: Record<string, CaseStudy> = {
     title: 'AgriThread: Real-time Multi-role Ecosystem',
     subtitle: 'Fintech x Agriculture',
     description: 'Multi-role agricultural platform with real-time chat, job matching, and B2B marketplace. Scaled horizontally to handle thousands of concurrent users.',
-    heroImage: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCxhSpeIbDyLLXpuJqLqntF_e8wi5ws_APuD8StFYo_79iRgeC54bxfEiDGkh5-sDKKAXIjG9lpwdhX0DQdNn6e089yQ4_oVUydRLc4AXRqaKTczevFkwWUQT0cq5-nWqcUmiuxZM9jRUh31wSTbAHFQjqtWlMzYM1lHOtEJnzqRZi7GqmTNUc1YAsRLgqbGOuoVJhupnbG8E-2MqmgPgs1CaAZV_diAJDfD97D-ilqhnqN8uuH_9wN-YRrAFmDahBKNWhf3pKQhQ',
+    heroImage: '/agrithread_showcase.png',
+    liveUrl: 'https://agrithread.com',
     metrics: [
       {
         label: 'The Metric',
@@ -134,102 +136,103 @@ export const caseStudies: Record<string, CaseStudy> = {
         type: 'small'
       }
     ],
-    showcaseImage: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDimzJqHLhpGFFCO438uF4HE9b1DH8GbdeyVCBMIGHogSPqt3e69DypBwH7ir3yt7tCOeaJEj3Mwqip7qXFKKjiCUMHnWvCDrn7k_dnHgCDB5-419XyLGBt5YEFSbfqul7XKZufs0c6HAuts93K8bylQkcyRgpraXLe8FwXS5TeHShGOg7V1jCkD5GbXhIdM5rpVw1XylmXHqXKYTcZDjDIfIZH_vDE65L1R676V74iCmDtobnlXeS9ALsq32To-QEs2OC1tki9gA'
+    showcaseImage: '/agrithread_showcase.png'
   },
   verifycertify: {
     id: 'verifycertify',
     title: 'VerifyCertify: Blockchain Credential Verification',
     subtitle: 'Security x Blockchain',
-    description: 'Decentralized certificate issuance and verification portal with Solana wallet integration. Reduced validation latency by 90% compared to manual processes.',
-    heroImage: 'https://lh3.googleusercontent.com/aida-public/AB6AXuB-Z7Ei-nzu5h54TZ8_OsZbtQOdy8926VX4KFRre9nn1RvQdYldzdQkccP_gg3AB2PeSjRNPncMDDw7IwzThsPhh4Fqukqq-MpQbLz5FhS9qbuDXnj3P4AY7ipr9WbU4q2nemWeP4ZgrAgcLdwJ6Se6Fi5mSJr_fo3oJGFd__RwPyESKQ7xXNaodHL85beWfQzGo2sIGe6bUyq_EpNkze_WgGnG7oeX8MwUHWkjvWOTCEI_5-qe9ikndbJwR9gUYCvwwTl0BU1P2g',
+    description: 'Decentralized certificate issuance and verification portal with Solana wallet integration. Reduced validation latency to sub-second speeds compared to manual processes.',
+    heroImage: '/verifycertify.png',
+    liveUrl: 'https://certify-nu-two.vercel.app',
     metrics: [
       {
-        label: 'Validation Latency',
-        value: '90% Faster',
-        desc: 'Reduced average certificate verification time from days to seconds.'
+        label: 'Secured Credentials',
+        value: '100k+',
+        desc: 'Tamper-proof credentials issued and anchored securely on-chain.'
       },
       {
-        label: 'Anchor Target',
-        value: 'Solana Dev',
-        desc: 'Verifiable certificate issuance anchored directly to Solana Ledger.'
+        label: 'Verification Speed',
+        value: '0.4s Latency',
+        desc: 'Instant cryptographic credential validation anywhere globally.'
       },
       {
-        label: 'RBAC Model',
-        value: '3 Sync Roles',
-        desc: 'Multi-role profiles supporting Admins, Organizations, and Learners.'
+        label: 'Storage Durability',
+        value: 'Lifetime Storage',
+        desc: 'Permanent on-chain metadata with zero ongoing maintenance costs.'
       }
     ],
     challenge: 'Academic and professional institutions face growing credential fraud. Standard verification is manual, tedious, and depends on slow central registries. We needed a secure, decentralized solution where verified achievements are tamper-proof and instant to validate.',
-    technicalApproach: 'We developed the platform using Next.js and MongoDB, integrating Solana smart contracts to anchor certificate hashes cryptographically. Role-Based Access Control (RBAC) securely splits workspace activities across institutions and students.',
+    technicalApproach: 'We developed the platform using Next.js, MongoDB, and Solana to anchor certificate hashes. By employing Solana compressed NFTs (cNFTs) and wallet connections (Phantom/Solflare), institutions can mint digital credentials securely at minimal cost, and verifiers can trace credential validity instantly via public ledgers.',
     features: [
       {
-        title: 'Solana Ledger',
-        desc: 'Cryptographic anchoring of document verification hashes to the Solana blockchain ledger.',
+        title: 'Solana cNFTs',
+        desc: 'Compressed NFT implementation on Solana for extremely low-cost, permanent on-chain certification.',
         icon: 'hub'
       },
       {
-        title: 'Dynamic RBAC',
-        desc: 'Role-Based Access Control dividing portals for Organizations, Administrators, and Learners.',
+        title: 'Multi-Role Portals',
+        desc: 'Distinct role-based access control dividing workspace activities for Issuers, Earners, and Verifiers.',
         icon: 'database'
       }
     ],
     timeline: [
       {
         step: '01',
-        title: 'Issue Request',
-        desc: 'Verified academic organization registers certificate metrics.',
+        title: 'Connect Wallet',
+        desc: 'Users and institutions establish secure identity using Phantom or Solflare wallet connections.',
         icon: 'input'
       },
       {
         step: '02',
-        title: 'Ledger Anchoring',
-        desc: 'Cryptographic hash generated and published to Solana nodes.',
+        title: 'cNFT Issuance',
+        desc: 'Verified academic organizations mint digital certificates as compressed NFTs on the Solana ledger.',
         icon: 'router'
       },
       {
         step: '03',
         title: 'Public Query',
-        desc: 'Verification portal queries blockchain ledger via web3 nodes.',
+        desc: 'Verifiers and third parties query verification signatures directly on the public blockchain ledger.',
         icon: 'sync_alt'
       },
       {
         step: '04',
-        title: 'Valid Response',
-        desc: 'Verifiably true data output with zero layout shifts.',
+        title: 'Solscan Validation',
+        desc: 'Instant verification matching on-chain cryptographic hashes with zero layout shifts.',
         icon: 'done_all'
       }
     ],
     impact: [
       {
-        title: 'Latency Reductions',
-        desc: 'Decentralized verification scales back manual request queues, processing hashes in sub-second times.',
-        value: '90',
-        subvalue: 'Reduction in verification delays',
+        title: 'Validation Speed',
+        desc: 'Traditional checks take days; our decentralized verification process finishes cryptographically in under half a second.',
+        value: '99',
+        subvalue: 'Faster processing speed',
         type: 'large'
       },
       {
-        title: 'Database Queries',
-        desc: 'Optimized MongoDB indexing with Solana node verification.',
-        value: '100%',
-        subvalue: 'Data Persistence integrity',
+        title: 'Secured Credentials',
+        desc: 'Over 100,000 digital credentials issued, permanently protected by Solana ledger security.',
+        value: '100k+',
+        subvalue: 'Tamper-proof certificates',
         type: 'medium'
       },
       {
-        title: 'Solana Sync',
-        desc: 'Real-time blockchain devnet verification.',
-        value: '100%',
-        subvalue: 'Tamper-proof',
+        title: 'Gas Cost Efficiency',
+        desc: 'Using Solana compressed NFTs results in dramatic fee savings compared to standard NFTs.',
+        value: '99%',
+        subvalue: 'Cost savings',
         type: 'small'
       },
       {
         title: 'Workspace Roles',
-        desc: 'Admins, Orgs, Learners synced.',
+        desc: 'Issuers, Earners, and Verifiers fully integrated and synced.',
         value: '03',
-        subvalue: 'Linked Profiles',
+        subvalue: 'Synchronized portals',
         type: 'small'
       }
     ],
-    showcaseImage: 'https://lh3.googleusercontent.com/aida-public/AB6AXuB-Z7Ei-nzu5h54TZ8_OsZbtQOdy8926VX4KFRre9nn1RvQdYldzdQkccP_gg3AB2PeSjRNPncMDDw7IwzThsPhh4Fqukqq-MpQbLz5FhS9qbuDXnj3P4AY7ipr9WbU4q2nemWeP4ZgrAgcLdwJ6Se6Fi5mSJr_fo3oJGFd__RwPyESKQ7xXNaodHL85beWfQzGo2sIGe6bUyq_EpNkze_WgGnG7oeX8MwUHWkjvWOTCEI_5-qe9ikndbJwR9gUYCvwwTl0BU1P2g'
+    showcaseImage: '/verifycertify.png'
   },
   resumebuilder: {
     id: 'resumebuilder',

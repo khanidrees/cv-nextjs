@@ -584,11 +584,10 @@ export default function HomePage() {
             <article className="bg-[#1a1d2e]/40 backdrop-blur-md border border-white/10 rounded-2xl overflow-hidden group">
               <div className="relative aspect-video overflow-hidden">
                 <Image
-                  alt="AgriThread Platform Dashboard"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxhSpeIbDyLLXpuJqLqntF_e8wi5ws_APuD8StFYo_79iRgeC54bxfEiDGkh5-sDKKAXIjG9lpwdhX0DQdNn6e089yQ4_oVUydRLc4AXRqaKTczevFkwWUQT0cq5-nWqcUmiuxZM9jRUh31wSTbAHFQjqtWlMzYM1lHOtEJnzqRZi7GqmTNUc1YAsRLgqbGOuoVJhupnbG8E-2MqmgPgs1CaAZV_diAJDfD97D-ilqhnqN8uuH_9wN-YRrAFmDahBKNWhf3pKQhQ"
+                  src="/agrithread_showcase.png"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+                  className="object-contain bg-[#0d1515] opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
                 />
               </div>
               <div className="p-6">
@@ -609,15 +608,28 @@ export default function HomePage() {
                 <p className="text-xs text-[#b9cacb] mb-6 leading-relaxed">
                   A real-time B2B marketplace for agricultural technology, featuring live chat and blockchain verification.
                 </p>
-                <Link
-                  className="inline-flex items-center gap-2 text-[#00f0ff] font-bold text-sm"
-                  href="/case-study/agrithread"
-                >
-                  View Case Study
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                  </svg>
-                </Link>
+                <div className="flex gap-4 items-center">
+                  <a
+                    className="bg-[#00f0ff] hover:bg-[#00dbe9] text-[#0d1515] px-4 py-2 rounded-lg font-bold text-xs uppercase tracking-wider transition-all shadow-[0_0_15px_rgba(0,240,255,0.2)] hover:shadow-[0_0_25px_rgba(0,240,255,0.4)] hover:translate-y-[-1px] inline-flex items-center gap-1.5"
+                    href="https://agrithread.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Visit Live
+                    <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
+                  <Link
+                    className="inline-flex items-center gap-2 text-[#00f0ff] font-bold text-sm hover:underline"
+                    href="/case-study/agrithread"
+                  >
+                    View Case Study
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                  </Link>
+                </div>
               </div>
             </article>
 
@@ -626,7 +638,7 @@ export default function HomePage() {
               <div className="relative aspect-video overflow-hidden">
                 <Image
                   alt="Cloud Systems"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-Z7Ei-nzu5h54TZ8_OsZbtQOdy8926VX4KFRre9nn1RvQdYldzdQkccP_gg3AB2PeSjRNPncMDDw7IwzThsPhh4Fqukqq-MpQbLz5FhS9qbuDXnj3P4AY7ipr9WbU4q2nemWeP4ZgrAgcLdwJ6Se6Fi5mSJr_fo3oJGFd__RwPyESKQ7xXNaodHL85beWfQzGo2sIGe6bUyq_EpNkze_WgGnG7oeX8MwUHWkjvWOTCEI_5-qe9ikndbJwR9gUYCvwwTl0BU1P2g"
+                  src="/verifycertify.png"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
@@ -650,15 +662,28 @@ export default function HomePage() {
                 <p className="text-xs text-[#b9cacb] mb-6 leading-relaxed">
                   Decentralized credential verification system with Solana wallet integration.
                 </p>
-                <Link
-                  className="inline-flex items-center gap-2 text-[#00f0ff] font-bold text-sm"
-                  href="/case-study/verifycertify"
-                >
-                  View Case Study
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                  </svg>
-                </Link>
+                <div className="flex gap-4 items-center">
+                  <a
+                    className="bg-[#00f0ff] hover:bg-[#00dbe9] text-[#0d1515] px-4 py-2 rounded-lg font-bold text-xs uppercase tracking-wider transition-all shadow-[0_0_15px_rgba(0,240,255,0.2)] hover:shadow-[0_0_25px_rgba(0,240,255,0.4)] hover:translate-y-[-1px] inline-flex items-center gap-1.5"
+                    href="https://certify-nu-two.vercel.app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Visit Live
+                    <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
+                  <Link
+                    className="inline-flex items-center gap-2 text-[#00f0ff] font-bold text-sm hover:underline"
+                    href="/case-study/verifycertify"
+                  >
+                    View Case Study
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                  </Link>
+                </div>
               </div>
             </article>
 
@@ -719,11 +744,10 @@ export default function HomePage() {
             <article className="bg-[#1a1d2e]/40 backdrop-blur-md border border-white/10 rounded-2xl overflow-hidden group hover:border-[#00f0ff]/50 transition-all duration-300">
               <div className="aspect-video relative overflow-hidden">
                 <Image
-                  alt="AgriThread Platform Dashboard"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxhSpeIbDyLLXpuJqLqntF_e8wi5ws_APuD8StFYo_79iRgeC54bxfEiDGkh5-sDKKAXIjG9lpwdhX0DQdNn6e089yQ4_oVUydRLc4AXRqaKTczevFkwWUQT0cq5-nWqcUmiuxZM9jRUh31wSTbAHFQjqtWlMzYM1lHOtEJnzqRZi7GqmTNUc1YAsRLgqbGOuoVJhupnbG8E-2MqmgPgs1CaAZV_diAJDfD97D-ilqhnqN8uuH_9wN-YRrAFmDahBKNWhf3pKQhQ"
+                  src="/agrithread_showcase.png"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  className="object-cover opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+                  className="object-contain bg-[#0d1515] opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
                 />
               </div>
               <div className="p-8">
@@ -736,15 +760,28 @@ export default function HomePage() {
                 <p className="text-sm text-[#b9cacb] mb-6 leading-relaxed">
                   Multi-role agricultural platform with real-time chat, job matching, and B2B marketplace. Scaled horizontally to handle thousands of concurrent users.
                 </p>
-                <Link
-                  className="inline-flex items-center gap-2 text-[#00f0ff] font-bold"
-                  href="/case-study/agrithread"
-                >
-                  View Case Study
-                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                  </svg>
-                </Link>
+                <div className="flex gap-6 items-center">
+                  <a
+                    className="bg-[#00f0ff] hover:bg-[#00dbe9] text-[#0d1515] px-5 py-2.5 rounded-lg font-bold text-xs uppercase tracking-wider transition-all shadow-[0_0_15px_rgba(0,240,255,0.2)] hover:shadow-[0_0_25px_rgba(0,240,255,0.4)] hover:translate-y-[-1px] inline-flex items-center gap-1.5"
+                    href="https://agrithread.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Visit Live
+                    <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
+                  <Link
+                    className="inline-flex items-center gap-2 text-[#00f0ff] font-bold hover:underline"
+                    href="/case-study/agrithread"
+                  >
+                    View Case Study
+                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                  </Link>
+                </div>
               </div>
             </article>
 
@@ -753,10 +790,10 @@ export default function HomePage() {
               <div className="aspect-video relative overflow-hidden">
                 <Image
                   alt="VerifyCertify Blockchain Verification"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-Z7Ei-nzu5h54TZ8_OsZbtQOdy8926VX4KFRre9nn1RvQdYldzdQkccP_gg3AB2PeSjRNPncMDDw7IwzThsPhh4Fqukqq-MpQbLz5FhS9qbuDXnj3P4AY7ipr9WbU4q2nemWeP4ZgrAgcLdwJ6Se6Fi5mSJr_fo3oJGFd__RwPyESKQ7xXNaodHL85beWfQzGo2sIGe6bUyq_EpNkze_WgGnG7oeX8MwUHWkjvWOTCEI_5-qe9ikndbJwR9gUYCvwwTl0BU1P2g"
+                  src="/verifycertify.png"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  className="object-cover opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+                  className="object-contain bg-[#0d1515] opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
                 />
               </div>
               <div className="p-8">
@@ -769,15 +806,28 @@ export default function HomePage() {
                 <p className="text-sm text-[#b9cacb] mb-6 leading-relaxed">
                   Blockchain certificate verification system. Reduced validation time from days to seconds with secure cryptographics.
                 </p>
-                <Link
-                  className="inline-flex items-center gap-2 text-[#00f0ff] font-bold"
-                  href="/case-study/verifycertify"
-                >
-                  View Case Study
-                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                  </svg>
-                </Link>
+                <div className="flex gap-6 items-center">
+                  <a
+                    className="bg-[#00f0ff] hover:bg-[#00dbe9] text-[#0d1515] px-5 py-2.5 rounded-lg font-bold text-xs uppercase tracking-wider transition-all shadow-[0_0_15px_rgba(0,240,255,0.2)] hover:shadow-[0_0_25px_rgba(0,240,255,0.4)] hover:translate-y-[-1px] inline-flex items-center gap-1.5"
+                    href="https://certify-nu-two.vercel.app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Visit Live
+                    <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
+                  <Link
+                    className="inline-flex items-center gap-2 text-[#00f0ff] font-bold hover:underline"
+                    href="/case-study/verifycertify"
+                  >
+                    View Case Study
+                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                  </Link>
+                </div>
               </div>
             </article>
 

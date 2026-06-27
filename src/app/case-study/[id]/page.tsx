@@ -106,10 +106,22 @@ export default function CaseStudyPage({ params }: PageProps) {
           </span>
         </Link>
         <div className="pointer-events-auto flex gap-4">
-          <div className="h-10 px-4 flex items-center gap-2 bg-[#00f0ff]/10 border border-[#00f0ff]/30 rounded-lg text-[#00f0ff] font-mono text-xs font-bold uppercase tracking-widest">
-            <span className="w-2 h-2 rounded-full bg-[#00f0ff] animate-pulse"></span>
-            Live Case
-          </div>
+          {study.liveUrl ? (
+            <a
+              href={study.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="h-10 px-4 flex items-center gap-2 bg-[#00f0ff] hover:bg-[#00dbe9] text-[#0d1515] rounded-lg font-mono text-xs font-bold uppercase tracking-widest transition-all shadow-[0_0_15px_rgba(0,240,255,0.4)] pointer-events-auto"
+            >
+              <span className="w-2.5 h-2.5 rounded-full bg-[#0d1515] animate-pulse"></span>
+              Visit Live Site
+            </a>
+          ) : (
+            <div className="h-10 px-4 flex items-center gap-2 bg-[#00f0ff]/10 border border-[#00f0ff]/30 rounded-lg text-[#00f0ff] font-mono text-xs font-bold uppercase tracking-widest">
+              <span className="w-2 h-2 rounded-full bg-[#00f0ff] animate-pulse"></span>
+              Live Case
+            </div>
+          )}
         </div>
       </nav>
 
