@@ -584,6 +584,7 @@ export default function HomePage() {
             <article className="bg-[#1a1d2e]/40 backdrop-blur-md border border-white/10 rounded-2xl overflow-hidden group">
               <div className="relative aspect-video overflow-hidden">
                 <Image
+                  alt="AgriThread Platform Dashboard"
                   src="/agrithread_showcase.png"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -744,6 +745,7 @@ export default function HomePage() {
             <article className="bg-[#1a1d2e]/40 backdrop-blur-md border border-white/10 rounded-2xl overflow-hidden group hover:border-[#00f0ff]/50 transition-all duration-300">
               <div className="aspect-video relative overflow-hidden">
                 <Image
+                  alt="AgriThread Platform Dashboard"
                   src="/agrithread_showcase.png"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
